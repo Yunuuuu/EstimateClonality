@@ -265,7 +265,7 @@ get.seg.mat.arm <- function (seg.mat.copy
       chr.sub <- sub[sub[,2]==chr,,drop=FALSE]
       
       # identify subset of segments that are on chr1 or chr1.5
-      chr.p                                              <- chr.sub[which(as.numeric(chr.sub[,3]) < centromere[chr,2]),,drop=FALSE]
+      chr.p <- chr.sub[which(as.numeric(chr.sub[,3]) < centromere[chr,2]),,drop=FALSE]
       if(nrow(chr.p)!=0)
       {
         chr.p[as.numeric(chr.p[,4])>centromere[chr,2],4]   <- round(centromere[as.character(chr),2])
